@@ -57,6 +57,30 @@
     html {
       scroll-behavior: smooth;
     }
+      .page {
+      position: relative; /* 背景の基準点にする */
+      z-index: 1;
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      /* 💡 表示させたい画像ファイル名に書き換えてください */
+      background-image: url('bobcablePB0800210272_TP_V.jpg'); 
+      background-size: cover;
+      background-position: center;
+      
+      /* 💡 0.15 は 15% の濃さという意味（好みの薄さに調整してね） */
+      opacity: 0.15; 
+      
+      /* 文字の後ろに配置する */
+      z-index: -1; 
+    }
   </style>
 </head>
     
